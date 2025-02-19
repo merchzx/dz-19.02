@@ -123,6 +123,10 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //
 //
 HCURSOR hCursor1;
+HCURSOR hCursor2;
+HCURSOR hCursor3;
+HCURSOR hCursor4;
+HCURSOR hCursor5;
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
@@ -148,16 +152,33 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     case WM_CREATE:
     {
         HINSTANCE hInt = GetModuleHandle(0);
-        hCursor1 = LoadCursor(hInt, MAKEINTRESOURCE(IDC_CURSOR5));
+        hCursor1 = LoadCursor(hInt, MAKEINTRESOURCE(IDC_CURSOR1));
+        hCursor2 = LoadCursor(hInt, MAKEINTRESOURCE(IDC_CURSOR2));
+        hCursor3 = LoadCursor(hInt, MAKEINTRESOURCE(IDC_CURSOR3));
+        hCursor4 = LoadCursor(hInt, MAKEINTRESOURCE(IDC_CURSOR4));
+        hCursor5 = LoadCursor(hInt, MAKEINTRESOURCE(IDC_CURSOR5));
     }   break;
     case WM_MOUSEMOVE:
     {
         RECT rect;
         GetClientRect(hWnd, &rect);
-        int x = LOWORD(hWnd);
-        int y = HIWORD(hWnd);
-        if (y >= rect.bottom / 3) {
+        int x = LOWORD(lParam);
+        int y = HIWORD(lParam);
+        if (x <= rect.right / 6 && y <= rect.bottom / 5) {
             SetCursor(hCursor1);
+        }
+        if (x >= rect.right / 1.2 && y <= rect.bottom / 5) {
+            SetCursor(hCursor2);
+        }
+        if (x <= rect.right / 6 && y >= rect.bottom / 1.4) {
+            SetCursor(hCursor3);
+        }
+        if (x >= rect.right / 1.2 && y >= rect.bottom / 1.4) {
+            SetCursor(hCursor4);
+        }
+        if (x >= rect.right / 4 && x <= rect.right * 3 / 4 &&
+            y >= rect.bottom / 4 && y <= rect.bottom * 3 / 4) {
+            SetCursor(hCursor5);
         }
     }
     case WM_PAINT:

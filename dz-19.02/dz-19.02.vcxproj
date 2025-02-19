@@ -142,13 +142,6 @@
     <Image Include="dz-19.02.ico" />
     <Image Include="small.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\Downloads\aero_arrow.cur" />
-    <None Include="..\..\..\..\Downloads\aero_link.cur" />
-    <None Include="..\..\..\..\Downloads\aero_pen.cur" />
-    <None Include="..\..\..\..\Downloads\normal.cur" />
-    <None Include="..\..\..\..\Downloads\Unavailable.cur" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -46,21 +46,4 @@
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\Downloads\normal.cur">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\..\..\..\Downloads\aero_pen.cur">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\..\..\..\Downloads\Unavailable.cur">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\..\..\..\Downloads\aero_arrow.cur">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\..\..\..\Downloads\aero_link.cur">
-      <Filter>Resource Files</Filter>
-    </None>
-  </ItemGroup>
 </Project>
